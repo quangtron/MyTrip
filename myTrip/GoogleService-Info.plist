@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AD_UNIT_ID_FOR_BANNER_TEST</key>
+	<string>ca-app-pub-3940256099942544/2934735716</string>
+	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
+	<string>ca-app-pub-3940256099942544/4411468910</string>
+	<key>CLIENT_ID</key>
+	<string>550098090364-h9lthudsjcinlgalsqgrcujsqcttv64k.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.550098090364-h9lthudsjcinlgalsqgrcujsqcttv64k</string>
+	<key>API_KEY</key>
+	<string>AIzaSyCJoRMVrwjLK6UHI4RyxYQ0Jd2j4Jcw5ro</string>
+	<key>GCM_SENDER_ID</key>
+	<string>550098090364</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>Le-Thanh-Thanh-Toai.myTrip</string>
+	<key>PROJECT_ID</key>
+	<string>tripproduction-5b085</string>
+	<key>STORAGE_BUCKET</key>
+	<string>tripproduction-5b085.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<true></true>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<false></false>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:550098090364:ios:69f786d099b8f18d</string>
+	<key>DATABASE_URL</key>
+	<string>https://tripproduction-5b085.firebaseio.com</string>
+</dict>
+</plist>

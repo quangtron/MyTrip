@@ -7,6 +7,11 @@
 //
 
 import UIKit
+import Firebase
+import GoogleMaps
+
+let primaryColor = UIColor(red: 70/255, green: 100/255, blue: 230/255, alpha: 1)
+let secondaryColor = UIColor(red: 70/255, green: 100/255, blue: 195/255, alpha: 1)
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,6 +21,34 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        FirebaseApp.configure()
+        GMSServices.provideAPIKey("AIzaSyATyagHwabNsnGSmH4r5RT5JKrhjjMvq0w")
+        
+        let authListener = Auth.auth().addStateDidChangeListener { auth, user in
+            
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            
+            if user != nil {
+                //
+                UserService.observeUserProfile(user!.uid) { userProfile in
+                    UserService.currentUserProfile = userProfile
+                }
+                
+                let controller = storyboard.instantiateViewController(withIdentifier: "MainTabBarController") as! UITabBarController
+                self.window?.rootViewController = controller
+                self.window?.makeKeyAndVisible()
+            } else {
+                
+                UserService.currentUserProfile = nil
+                // menu screen
+                let controller = storyboard.instantiateViewController(withIdentifier: "MenuViewController") as! MenuViewController
+                self.window?.rootViewController = controller
+                self.window?.makeKeyAndVisible()
+            }
+        }
+
+        
         return true
     }
 
